@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 Fondo Amarillo Hero - Pallets Premium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2C2C2C 100%);
+            color: white;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: #F5A623;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #E0E0E0;
+            margin-bottom: 3rem;
+        }
+        
+        .success {
+            background: rgba(40, 167, 69, 0.2);
+            border: 3px solid #28A745;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 2rem 0;
+            color: #4CAF50;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .option-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(245, 166, 35, 0.3);
+        }
+        
+        .option-card.active {
+            border-color: #F5A623;
+            border-width: 3px;
+            background: rgba(245, 166, 35, 0.1);
+        }
+        
+        .option-card h2 {
+            color: #F5A623;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #28A745;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .preview-box {
+            background: linear-gradient(135deg, #FDB913 0%, #F5A623 50%, #FFB84D 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .preview-box::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 60%;
+            height: 60%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(80px);
+        }
+        
+        .preview-text {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1.5rem;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .code-block {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid rgba(245, 166, 35, 0.3);
+            margin: 1.5rem 0;
+            position: relative;
+        }
+        
+        .code-block pre {
+            color: #4CAF50;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 0;
+        }
+        
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #F5A623;
+            color: #2C2C2C;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .copy-button:hover {
+            background: #FFB84D;
+            transform: translateY(-2px);
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #F5A623 0%, #FFB84D 100%);
+            color: #2C2C2C;
+            padding: 1.2rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(245, 166, 35, 0.5);
+        }
+        
+        .steps {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        
+        .steps ol {
+            margin-left: 1.5rem;
+        }
+        
+        .steps li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+        
+        .alert {
+            background: rgba(33, 150, 243, 0.15);
+            border-left: 5px solid #2196F3;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .alert h3 {
+            color: #64B5F6;
+            margin-bottom: 0.8rem;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        @media (max-width: 968px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Fondo Amarillo en Hero Section</h1>
+        <p class="subtitle">¡Implementado! Elige tu opción favorita</p>
+        
+        <div class="success">
+            ✅ Opción C (CSS) está activa ahora mismo
+        </div>
+        
+        <!-- Comparación de opciones -->
+        <div class="comparison-grid">
+            <!-- OPCIÓN A -->
+            <div class="option-card">
+                <span class="badge" style="background: #FF9800;">OPCIÓN A</span>
+                <h2>Usar Tu Imagen</h2>
+                
+                <p style="margin-bottom: 1rem; color: rgba(255,255,255,0.8);">
+                    Usa la imagen amarilla original con overlay para legibilidad del texto.
+                </p>
+                
+                <div style="background: rgba(255,152,0,0.1); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                    <strong style="color: #FFB84D;">Ventajas:</strong>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; color: rgba(255,255,255,0.8);">
+                        <li>Diseño original exacto</li>
+                        <li>Elementos gráficos auténticos</li>
+                        <li>Más personalizado</li>
+                    </ul>
+                </div>
+                
+                <div class="steps">
+                    <strong style="color: #F5A623;">Pasos para activar:</strong>
+                    <ol>
+                        <li>Sube tu imagen a <strong>ImgBB</strong> o <strong>Imgur</strong></li>
+                        <li>Copia la URL directa</li>
+                        <li>Abre <code style="background: rgba(0,0,0,0.4); padding: 0.2rem 0.5rem; border-radius: 3px;">index.html</code></li>
+                        <li>Busca la línea ~35 y activa el comentario</li>
+                        <li>Pega tu URL en la configuración</li>
+                    </ol>
+                </div>
+                
+                <div class="code-block">
+                    <button class="copy-button" onclick="copyCodeA()">📋 Copiar</button>
+                    <pre id="codeA">&lt;!-- Activar esto --&gt;
+&lt;div class="hero-background-image"&gt;&lt;/div&gt;
+
+&lt;!-- Y en CONFIG agregar: --&gt;
+imagenFondoHero: 'TU_URL_AQUI'</pre>
+                </div>
+            </div>
+            
+            <!-- OPCIÓN C -->
+            <div class="option-card active">
+                <span class="badge">OPCIÓN C - ACTIVA ✅</span>
+                <h2>Fondo CSS Recreado</h2>
+                
+                <p style="margin-bottom: 1rem; color: rgba(255,255,255,0.8);">
+                    Fondo amarillo creado con CSS puro, similar al original con degradados y formas.
+                </p>
+                
+                <div class="preview-box">
+                    <div class="preview-text">
+                        Vista Previa del Fondo
+                    </div>
+                </div>
+                
+                <div style="background: rgba(40,167,69,0.1); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                    <strong style="color: #4CAF50;">Ventajas:</strong>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; color: rgba(255,255,255,0.8);">
+                        <li>Ya está funcionando</li>
+                        <li>Carga ultra rápida</li>
+                        <li>100% responsive</li>
+                        <li>Sin dependencias externas</li>
+                    </ul>
+                </div>
+                
+                <div class="steps">
+                    <strong style="color: #4CAF50;">Ya está activo:</strong>
+                    <p style="margin: 0.5rem 0; color: rgba(255,255,255,0.8);">
+                        El fondo amarillo con degradados y formas decorativas está visible en tu landing page ahora mismo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Instrucciones para cambiar -->
+        <div class="alert">
+            <h3>🔄 Cómo Cambiar entre Opciones</h3>
+            
+            <p style="margin-bottom: 1rem;"><strong>Para usar tu imagen (Opción A):</strong></p>
+            <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;">Sube tu imagen amarilla a <a href="https://imgbb.com" target="_blank" style="color: #F5A623;">ImgBB</a> o <a href="https://imgur.com" target="_blank" style="color: #F5A623;">Imgur</a></li>
+                <li style="margin-bottom: 0.5rem;">Copia la URL directa (Direct link)</li>
+                <li style="margin-bottom: 0.5rem;">Abre <strong>CONFIGURAR_URLS.html</strong></li>
+                <li style="margin-bottom: 0.5rem;">Pega la URL en "Imagen de Fondo Hero"</li>
+                <li style="margin-bottom: 0.5rem;">Genera el código y pégalo en index.html</li>
+                <li style="margin-bottom: 0.5rem;">En <strong>index.html</strong> línea ~35, quita el comentario de:
+                    <code style="background: rgba(0,0,0,0.4); padding: 0.3rem 0.6rem; border-radius: 4px; display: inline-block; margin: 0.3rem 0;">&lt;div class="hero-background-image"&gt;&lt;/div&gt;</code>
+                </li>
+                <li>Guarda y recarga (F5)</li>
+            </ol>
+            
+            <p style="margin-bottom: 1rem;"><strong>Para volver al fondo CSS (Opción C):</strong></p>
+            <p style="margin-left: 1.5rem; color: rgba(255,255,255,0.8);">
+                Solo comenta de nuevo la línea de la imagen y el fondo CSS seguirá activo.
+            </p>
+        </div>
+        
+        <!-- Código para copiar -->
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+            <h2 style="color: #F5A623; margin-bottom: 1.5rem; text-align: center;">📋 Código para Opción A (Tu Imagen)</h2>
+            
+            <p style="margin-bottom: 1rem; color: rgba(255,255,255,0.8);"><strong>1. En index.html (línea ~35):</strong></p>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode1()">📋 Copiar</button>
+                <pre id="code1">&lt;!-- Activar esta línea quitando el comentario --&gt;
+&lt;div class="hero-background-image"&gt;&lt;/div&gt;</pre>
+            </div>
+            
+            <p style="margin: 1.5rem 0 1rem; color: rgba(255,255,255,0.8);"><strong>2. En la configuración (línea ~27):</strong></p>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode2()">📋 Copiar</button>
+                <pre id="code2">imagenFondoHero: 'https://i.imgur.com/TU-IMAGEN-AQUI.jpg',</pre>
+            </div>
+        </div>
+        
+        <!-- Botones de acción -->
+        <div class="text-center" style="margin: 3rem 0;">
+            <button class="button" onclick="window.open('index.html', '_blank')" style="font-size: 1.3rem; padding: 1.3rem 3rem;">
+                👁️ Ver Landing Page con Fondo Amarillo
+            </button>
+            <br>
+            <button class="button" onclick="window.open('https://imgbb.com', '_blank')">
+                📤 Subir Imagen a ImgBB
+            </button>
+            <button class="button" onclick="window.open('CONFIGURAR_URLS.html', '_blank')">
+                🔧 Configurar URLs
+            </button>
+        </div>
+        
+        <!-- Recomendación -->
+        <div style="background: rgba(245, 166, 35, 0.1); border: 2px solid #F5A623; padding: 2rem; border-radius: 15px; margin: 3rem 0;">
+            <h3 style="color: #F5A623; margin-bottom: 1rem; text-align: center;">💡 Mi Recomendación</h3>
+            <p style="text-align: center; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+                <strong>Prueba ambas opciones:</strong>
+            </p>
+            <p style="text-align: center; margin-top: 1rem; color: rgba(255,255,255,0.8);">
+                1. Primero mira cómo se ve con el <strong>fondo CSS</strong> (ya activo)<br>
+                2. Si quieres el diseño exacto, sube tu imagen y activa la <strong>Opción A</strong><br>
+                3. Compara y elige la que más te guste
+            </p>
+        </div>
+        
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(245, 166, 35, 0.3); color: rgba(255, 255, 255, 0.7);">
+            <p style="font-size: 1.2rem;"><strong>💛 ¡Fondo Amarillo Implementado!</strong></p>
+            <p style="margin-top: 1rem;">La Opción C (CSS) está activa. Puedes cambiar a la Opción A cuando subas tu imagen.</p>
+        </div>
+    </div>
+    
+    <script>
+        function copyCodeA() {
+            const code = document.getElementById('codeA').textContent;
+            copyToClipboard(code, 'Código Opción A copiado');
+        }
+        
+        function copyCode1() {
+            const code = document.getElementById('code1').textContent;
+            copyToClipboard(code, 'Código HTML copiado');
+        }
+        
+        function copyCode2() {
+            const code = document.getElementById('code2').textContent;
+            copyToClipboard(code, 'Código CONFIG copiado');
+        }
+        
+        function copyToClipboard(text, message) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('✅ ' + message + '\n\nAhora pégalo en tu archivo correspondiente.');
+            }).catch(err => {
+                alert('❌ Error al copiar. Selecciona y copia manualmente.');
+            });
+        }
+    </script>
+</body>
+</html>
+

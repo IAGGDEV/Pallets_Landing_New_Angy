@@ -1,0 +1,88 @@
+=====================================
+  PALLETS PREMIUM - LANDING PAGE
+  INSTRUCCIONES DE CONFIGURACIÓN
+=====================================
+
+📋 ACCIÓN REQUERIDA: GUARDAR EL LOGO
+
+Para que la landing page se vea correctamente, necesitas:
+
+1. GUARDAR LA IMAGEN DEL LOGO:
+   - Haz clic derecho en la imagen del logo que te mostré
+   - Selecciona "Guardar imagen como..."
+   - Guárdala en este directorio: C:\Users\IAGG2\OneDrive\PalletsPremium\Pallets Landing_New\
+   - Nómbrala exactamente: logo.png
+   - Formato: PNG (preferible) o JPG
+
+2. RECARGAR LA PÁGINA:
+   - Una vez guardada la imagen, presiona F5 en tu navegador
+   - O cierra y vuelve a abrir index.html
+
+=====================================
+  ESTADO ACTUAL DEL PROYECTO
+=====================================
+
+✅ COMPLETADO:
+   - Estructura HTML semántica
+   - Estilos CSS responsive
+   - JavaScript interactivo
+   - Sección Hero completa
+   - Animaciones implementadas
+   - CTA flotante (sticky button)
+
+⏳ PENDIENTE:
+   - Agregar logo.png al proyecto
+   - Implementar secciones restantes (2-10)
+
+=====================================
+  CÓMO ABRIR EL PROYECTO
+=====================================
+
+OPCIÓN 1: Doble clic
+   - Haz doble clic en "index.html"
+
+OPCIÓN 2: Desde PowerShell
+   - Abre PowerShell
+   - Ejecuta: cd "C:\Users\IAGG2\OneDrive\PalletsPremium\Pallets Landing_New"
+   - Ejecuta: Invoke-Item index.html
+
+OPCIÓN 3: Servidor local (recomendado para desarrollo)
+   - Si tienes Python: python -m http.server 8000
+   - Si tienes Node.js: npx http-server
+   - Luego abre: http://localhost:8000
+
+=====================================
+  ARCHIVOS DEL PROYECTO
+=====================================
+
+index.html      → Página principal HTML
+styles.css      → Todos los estilos
+script.js       → Interacciones JavaScript
+logo.png        → Logo (PENDIENTE DE AGREGAR)
+README.md       → Documentación técnica
+INSTRUCCIONES.txt → Este archivo
+
+=====================================
+  PRÓXIMOS PASOS
+=====================================
+
+1. ✅ Guardar logo.png
+2. ⏳ Revisar Hero en el navegador
+3. ⏳ Iterar sobre el diseño si es necesario
+4. ⏳ Implementar Sección 2 (Problema-Agitación-Solución)
+5. ⏳ Continuar con secciones 3-10
+
+=====================================
+  SOPORTE TÉCNICO
+=====================================
+
+Si tienes problemas:
+- Verifica que el archivo se llame exactamente "logo.png"
+- Verifica que esté en el mismo directorio que index.html
+- Limpia la caché del navegador (Ctrl + Shift + R)
+- Abre la consola del navegador (F12) para ver errores
+
+=====================================
+
+¿Necesitas ayuda? ¡Avísame y seguimos iterando! 🚀
+

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Estilos del Logo - Pallets Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2C2C2C 50%, #3a3a3a 100%);
+            padding: 3rem 1rem;
+            min-height: 100vh;
+        }
+        
+        .test-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .test-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .test-header h1 {
+            color: #F5A623;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .test-header p {
+            font-size: 1.2rem;
+            color: #E0E0E0;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .test-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .test-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #F5A623;
+            transform: translateY(-5px);
+        }
+        
+        .test-item-title {
+            color: #F5A623;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .test-item-description {
+            color: #B0B0B0;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .test-item-preview {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            margin-bottom: 1rem;
+        }
+        
+        .test-item-code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid #F5A623;
+            margin-top: 1rem;
+        }
+        
+        .test-item-code code {
+            color: #E0E0E0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            display: block;
+            overflow-x: auto;
+        }
+        
+        .copy-button {
+            background: #F5A623;
+            color: #2C2C2C;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .copy-button:hover {
+            background: #FFB84D;
+            transform: translateY(-2px);
+        }
+        
+        .copy-button:active {
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .test-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .test-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .test-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🎨 Prueba de Estilos del Logo</h1>
+            <p>Elige el estilo que más te guste para la landing page</p>
+        </div>
+        
+        <div class="test-grid">
+            <!-- OPCIÓN 0: Por defecto -->
+            <div class="test-item">
+                <h3 class="test-item-title">✨ Por Defecto (Actual)</h3>
+                <p class="test-item-description">Fondo semitransparente con resplandor dorado suave</p>
+                <div class="test-item-preview">
+                    <div class="logo-container">
+                        <img src="logo.png" alt="Pallets Premium Logo" class="logo">
+                    </div>
+                </div>
+                <div class="test-item-code">
+                    <code>&lt;div class="logo-container"&gt;</code>
+                </div>
+                <button class="copy-button" onclick="copyCode('logo-container')">✅ Usar Este (Ya Activo)</button>
+            </div>
+            
+            <!-- OPCIÓN 1: Fondo blanco -->
+            <div class="test-item">
+                <h3 class="test-item-title">⬜ Fondo Blanco Sólido</h3>
+                <p class="test-item-description">Ideal para logos con transparencia que necesitan más contraste</p>
+                <div class="test-item-preview">
+                    <div class="logo-container with-white-bg">
+                        <img src="logo.png" alt="Pallets Premium Logo" class="logo">
+                    </div>
+                </div>
+                <div class="test-item-code">
+                    <code>&lt;div class="logo-container with-white-bg"&gt;</code>
+                </div>
+                <button class="copy-button" onclick="copyCode('logo-container with-white-bg')">📋 Copiar Código</button>
+            </div>
+            
+            <!-- OPCIÓN 2: Fondo dorado -->
+            <div class="test-item">
+                <h3 class="test-item-title">🟡 Fondo Dorado Suave</h3>
+                <p class="test-item-description">Destaca el logo con los colores de la marca</p>
+                <div class="test-item-preview">
+                    <div class="logo-container with-gold-bg">
+                        <img src="logo.png" alt="Pallets Premium Logo" class="logo">
+                    </div>
+                </div>
+                <div class="test-item-code">
+                    <code>&lt;div class="logo-container with-gold-bg"&gt;</code>
+                </div>
+                <button class="copy-button" onclick="copyCode('logo-container with-gold-bg')">📋 Copiar Código</button>
+            </div>
+            
+            <!-- OPCIÓN 3: Efecto neón -->
+            <div class="test-item">
+                <h3 class="test-item-title">💡 Efecto Neón</h3>
+                <p class="test-item-description">Resplandor intenso tipo neón, moderno y llamativo</p>
+                <div class="test-item-preview">
+                    <div class="logo-container neon-effect">
+                        <img src="logo.png" alt="Pallets Premium Logo" class="logo">
+                    </div>
+                </div>
+                <div class="test-item-code">
+                    <code>&lt;div class="logo-container neon-effect"&gt;</code>
+                </div>
+                <button class="copy-button" onclick="copyCode('logo-container neon-effect')">📋 Copiar Código</button>
+            </div>
+            
+            <!-- OPCIÓN 4: Extra grande -->
+            <div class="test-item">
+                <h3 class="test-item-title">📏 Extra Grande</h3>
+                <p class="test-item-description">Logo 20% más grande para mayor prominencia</p>
+                <div class="test-item-preview">
+                    <div class="logo-container extra-large">
+                        <img src="logo.png" alt="Pallets Premium Logo" class="logo">
+                    </div>
+                </div>
+                <div class="test-item-code">
+                    <code>&lt;div class="logo-container extra-large"&gt;</code>
+                </div>
+                <button class="copy-button" onclick="copyCode('logo-container extra-large')">📋 Copiar Código</button>
+            </div>
+            
+            <!-- OPCIÓN 5: Animación pulso -->
+            <div class="test-item">
+                <h3 class="test-item-title">💓 Animación de Pulso</h3>
+                <p class="test-item-description">Animación sutil y elegante para atraer atención</p>
+                <div class="test-item-preview">
+                    <div class="logo-container pulse-animation">
+                        <img src="logo.png" alt="Pallets Premium Logo" class="logo">
+                    </div>
+                </div>
+                <div class="test-item-code">
+                    <code>&lt;div class="logo-container pulse-animation"&gt;</code>
+                </div>
+                <button class="copy-button" onclick="copyCode('logo-container pulse-animation')">📋 Copiar Código</button>
+            </div>
+            
+            <!-- OPCIÓN 6: Con borde -->
+            <div class="test-item">
+                <h3 class="test-item-title">🖼️ Borde Decorativo</h3>
+                <p class="test-item-description">Borde dorado elegante con esquinas decorativas</p>
+                <div class="test-item-preview">
+                    <div class="logo-container with-border">
+                        <img src="logo.png" alt="Pallets Premium Logo" class="logo">
+                    </div>
+                </div>
+                <div class="test-item-code">
+                    <code>&lt;div class="logo-container with-border"&gt;</code>
+                </div>
+                <button class="copy-button" onclick="copyCode('logo-container with-border')">📋 Copiar Código</button>
+            </div>
+            
+            <!-- OPCIÓN 7: Combinación recomendada 1 -->
+            <div class="test-item">
+                <h3 class="test-item-title">🌟 Combo Premium</h3>
+                <p class="test-item-description">Fondo dorado + Extra grande + Animación</p>
+                <div class="test-item-preview">
+                    <div class="logo-container with-gold-bg extra-large pulse-animation">
+                        <img src="logo.png" alt="Pallets Premium Logo" class="logo">
+                    </div>
+                </div>
+                <div class="test-item-code">
+                    <code>&lt;div class="logo-container with-gold-bg extra-large pulse-animation"&gt;</code>
+                </div>
+                <button class="copy-button" onclick="copyCode('logo-container with-gold-bg extra-large pulse-animation')">📋 Copiar Código</button>
+            </div>
+            
+            <!-- OPCIÓN 8: Combinación recomendada 2 -->
+            <div class="test-item">
+                <h3 class="test-item-title">⚡ Combo Impacto</h3>
+                <p class="test-item-description">Efecto neón + Extra grande para máximo impacto</p>
+                <div class="test-item-preview">
+                    <div class="logo-container neon-effect extra-large">
+                        <img src="logo.png" alt="Pallets Premium Logo" class="logo">
+                    </div>
+                </div>
+                <div class="test-item-code">
+                    <code>&lt;div class="logo-container neon-effect extra-large"&gt;</code>
+                </div>
+                <button class="copy-button" onclick="copyCode('logo-container neon-effect extra-large')">📋 Copiar Código</button>
+            </div>
+        </div>
+        
+        <div style="text-align: center; color: white; margin-top: 3rem; padding: 2rem; background: rgba(245, 166, 35, 0.1); border-radius: 12px;">
+            <h3 style="color: #F5A623; margin-bottom: 1rem;">📝 Instrucciones</h3>
+            <p style="margin-bottom: 1rem;">1. Revisa todos los estilos arriba</p>
+            <p style="margin-bottom: 1rem;">2. Haz clic en "Copiar Código" del que más te guste</p>
+            <p style="margin-bottom: 1rem;">3. Abre <strong>index.html</strong> y busca la línea 20</p>
+            <p style="margin-bottom: 1rem;">4. Reemplaza <code style="background: rgba(0,0,0,0.3); padding: 0.3rem 0.6rem; border-radius: 4px;">&lt;div class="logo-container"&gt;</code> con el código copiado</p>
+            <p>5. Guarda y recarga el navegador (F5)</p>
+        </div>
+    </div>
+    
+    <script>
+        function copyCode(className) {
+            const code = `<div class="${className}">`;
+            
+            // Copiar al portapapeles
+            navigator.clipboard.writeText(code).then(() => {
+                // Mostrar feedback visual
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = '✅ ¡Copiado!';
+                button.style.background = '#28A745';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#F5A623';
+                }, 2000);
+            }).catch(err => {
+                alert('Código: ' + code);
+            });
+        }
+    </script>
+</body>
+</html>
+

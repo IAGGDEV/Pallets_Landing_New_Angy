@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Usar Tu Imagen Amarilla - Guía Rápida</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2C2C2C 100%);
+            color: white;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #F5A623;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .urgent-banner {
+            background: linear-gradient(135deg, #FF5722 0%, #FF9800 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 2rem 0;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        .step-box {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #F5A623;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #F5A623;
+            color: #2C2C2C;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .step-title {
+            font-size: 1.5rem;
+            color: #FFB84D;
+            margin-bottom: 1rem;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #F5A623 0%, #FFB84D 100%);
+            color: #2C2C2C;
+            padding: 1.3rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.15rem;
+        }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(245, 166, 35, 0.5);
+        }
+        
+        .button-large {
+            font-size: 1.5rem;
+            padding: 1.5rem 3rem;
+        }
+        
+        .code-box {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid #F5A623;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+        
+        .code-box pre {
+            color: #4CAF50;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            overflow-x: auto;
+            margin: 0;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #F5A623;
+            color: #2C2C2C;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .copy-btn:hover {
+            background: #FFB84D;
+        }
+        
+        .url-input {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid #F5A623;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.1rem;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+        }
+        
+        .url-input:focus {
+            outline: none;
+            border-color: #FFB84D;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .preview {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(245, 166, 35, 0.3);
+        }
+        
+        .preview img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            border-radius: 10px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Poner Tu Imagen Amarilla de Fondo</h1>
+        
+        <div class="urgent-banner">
+            ¡3 PASOS RÁPIDOS! Solo tardarás 5 minutos
+        </div>
+        
+        <!-- PASO 1 -->
+        <div class="step-box">
+            <div class="step-number">1</div>
+            <div class="step-title">Subir la Imagen a ImgBB</div>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                Ve a ImgBB y sube tu imagen amarilla:
+            </p>
+            
+            <div style="background: rgba(0, 0, 0, 0.4); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                <ol style="margin-left: 1.5rem; font-size: 1.05rem;">
+                    <li style="margin-bottom: 0.8rem;">Guarda la imagen amarilla en tu computadora (clic derecho → Guardar imagen)</li>
+                    <li style="margin-bottom: 0.8rem;">Ve a <strong style="color: #F5A623;">imgbb.com</strong></li>
+                    <li style="margin-bottom: 0.8rem;">Haz clic en <strong>"Start uploading"</strong></li>
+                    <li style="margin-bottom: 0.8rem;">Arrastra o selecciona tu imagen</li>
+                    <li style="margin-bottom: 0.8rem;">Espera 2-3 segundos</li>
+                    <li>Copia el <strong>"Direct link"</strong> (el primero)</li>
+                </ol>
+            </div>
+            
+            <div class="text-center" style="margin: 2rem 0;">
+                <button class="button button-large" onclick="window.open('https://imgbb.com', '_blank')">
+                    📤 Ir a ImgBB Ahora
+                </button>
+            </div>
+        </div>
+        
+        <!-- PASO 2 -->
+        <div class="step-box">
+            <div class="step-number">2</div>
+            <div class="step-title">Pegar la URL Aquí (Vista Previa)</div>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                Pega la URL de tu imagen para ver vista previa:
+            </p>
+            
+            <input type="url" class="url-input" id="imageUrl" placeholder="https://i.ibb.co/XXXXXXX/tu-imagen.jpg" oninput="previewImage()">
+            
+            <div class="preview" id="preview">
+                <div style="color: rgba(255, 255, 255, 0.5); text-align: center;">
+                    <p style="font-size: 1.2rem;">📸 Vista previa aparecerá aquí</p>
+                    <p style="margin-top: 0.5rem;">Pega la URL arriba</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PASO 3 -->
+        <div class="step-box">
+            <div class="step-number">3</div>
+            <div class="step-title">Copiar y Pegar el Código</div>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                <strong>A. En index.html (línea ~17):</strong>
+            </p>
+            
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('code1')">📋 Copiar</button>
+                <pre id="code1">imagenFondoHero: 'AQUI_TU_URL',  // ⬅️ Pega tu URL aquí</pre>
+            </div>
+            
+            <p style="font-size: 1.1rem; margin: 2rem 0 1rem; color: #FFB84D;">
+                <strong>B. En index.html (línea ~34):</strong> Activar esta línea (quitar comentarios):
+            </p>
+            
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('code2')">📋 Copiar</button>
+                <pre id="code2">&lt;div class="hero-background-image"&gt;&lt;/div&gt;</pre>
+            </div>
+            
+            <p style="font-size: 1.1rem; margin: 2rem 0 1rem; color: #FFB84D;">
+                <strong>C. En index.html (línea ~32):</strong> Comentar esta línea (agregar &lt;!-- y --&gt;):
+            </p>
+            
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('code3')">📋 Copiar</button>
+                <pre id="code3">&lt;!-- &lt;div class="hero-background-yellow"&gt;&lt;/div&gt; --&gt;</pre>
+            </div>
+            
+            <div style="background: rgba(255, 152, 0, 0.15); border-left: 5px solid #FF9800; padding: 1.5rem; border-radius: 10px; margin: 2rem 0;">
+                <strong style="color: #FFB84D; font-size: 1.2rem;">📝 Resumen de cambios:</strong>
+                <ol style="margin: 1rem 0 0 1.5rem; font-size: 1.05rem;">
+                    <li style="margin-bottom: 0.5rem;">Pega tu URL en la configuración (línea ~17)</li>
+                    <li style="margin-bottom: 0.5rem;">Activa <code style="background: rgba(0,0,0,0.4); padding: 0.2rem 0.5rem; border-radius: 3px;">&lt;div class="hero-background-image"&gt;</code> (línea ~34)</li>
+                    <li style="margin-bottom: 0.5rem;">Desactiva <code style="background: rgba(0,0,0,0.4); padding: 0.2rem 0.5rem; border-radius: 3px;">&lt;div class="hero-background-yellow"&gt;</code> (línea ~32)</li>
+                    <li>Guarda (Ctrl + S) y recarga (F5)</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- Generador automático -->
+        <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(139, 195, 74, 0.2)); padding: 2rem; border-radius: 15px; border: 2px solid #4CAF50; margin: 3rem 0;">
+            <h2 style="color: #4CAF50; text-align: center; margin-bottom: 1.5rem; font-size: 1.8rem;">
+                ⚡ Generador Automático de Código
+            </h2>
+            
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 1.5rem;">
+                Pega tu URL de ImgBB y generaré el código completo:
+            </p>
+            
+            <input type="url" class="url-input" id="finalUrl" placeholder="https://i.ibb.co/XXXXXXX/tu-imagen.jpg" style="border-color: #4CAF50;">
+            
+            <div class="text-center" style="margin: 1.5rem 0;">
+                <button class="button button-large" onclick="generateCode()" style="background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);">
+                    ✨ Generar Código Completo
+                </button>
+            </div>
+            
+            <div id="generatedCode" style="display: none;">
+                <p style="font-size: 1.2rem; font-weight: bold; color: #4CAF50; margin: 1.5rem 0;">
+                    ✅ Código Generado - Cópialo y pégalo:
+                </p>
+                
+                <div class="code-box">
+                    <button class="copy-btn" onclick="copyCode('finalCode')">📋 Copiar Todo</button>
+                    <pre id="finalCode"></pre>
+                </div>
+                
+                <div style="background: rgba(76, 175, 80, 0.2); padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem;">
+                    <strong style="color: #4CAF50;">📋 Instrucciones:</strong>
+                    <ol style="margin: 1rem 0 0 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;">Copia el código de arriba</li>
+                        <li style="margin-bottom: 0.5rem;">Abre <strong>index.html</strong></li>
+                        <li style="margin-bottom: 0.5rem;">Busca <code style="background: rgba(0,0,0,0.4); padding: 0.2rem 0.5rem; border-radius: 3px;">window.CONFIG</code> (línea ~13)</li>
+                        <li style="margin-bottom: 0.5rem;">Reemplaza toda esa sección con el código copiado</li>
+                        <li>Guarda (Ctrl + S) y recarga el navegador (F5)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botones finales -->
+        <div class="text-center" style="margin: 3rem 0;">
+            <button class="button" onclick="window.open('index.html', '_blank')">
+                👁️ Ver Landing Page
+            </button>
+            <button class="button" onclick="window.open('https://imgbb.com', '_blank')">
+                📤 Ir a ImgBB
+            </button>
+        </div>
+        
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(245, 166, 35, 0.3); color: rgba(255, 255, 255, 0.7);">
+            <p style="font-size: 1.2rem;"><strong>💛 ¡Tu Imagen Amarilla como Fondo!</strong></p>
+            <p style="margin-top: 1rem;">Sigue los 3 pasos y tendrás tu imagen en la landing en 5 minutos</p>
+        </div>
+    </div>
+    
+    <script>
+        function previewImage() {
+            const url = document.getElementById('imageUrl').value.trim();
+            const preview = document.getElementById('preview');
+            
+            if (url && (url.startsWith('http://') || url.startsWith('https://'))) {
+                preview.innerHTML = `<img src="${url}" alt="Preview" onerror="this.parentElement.innerHTML='<div style=\\'color: #FF5252; text-align: center;\\'><p style=\\'font-size: 1.2rem;\\'>❌ Error al cargar</p><p>Verifica la URL</p></div>'">`;
+            } else {
+                preview.innerHTML = '<div style="color: rgba(255, 255, 255, 0.5); text-align: center;"><p style="font-size: 1.2rem;">📸 Vista previa aparecerá aquí</p><p style="margin-top: 0.5rem;">Pega la URL arriba</p></div>';
+            }
+        }
+        
+        function copyCode(id) {
+            const code = document.getElementById(id).textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('✅ Código copiado al portapapeles');
+            }).catch(err => {
+                alert('❌ Error al copiar. Selecciona y copia manualmente.');
+            });
+        }
+        
+        function generateCode() {
+            const url = document.getElementById('finalUrl').value.trim();
+            
+            if (!url || (!url.startsWith('http://') && !url.startsWith('https://'))) {
+                alert('⚠️ Por favor, pega una URL válida de ImgBB');
+                return;
+            }
+            
+            const code = `    window.CONFIG = {
+        // Números de WhatsApp
+        whatsappPrimary: '5215512345678', // ⚠️ CAMBIAR POR TU NÚMERO
+        whatsappSecondary: '5215587654321',
+        
+        // Mensajes predeterminados
+        mensajeHero: 'Hola! Quiero mi pallet hoy mismo 🔥',
+        mensajeOferta: 'Hola! Me interesa conocer las ofertas de pallets',
+        mensajeCierre: 'Hola! Quiero empezar a ganar con Pallets Premium',
+        
+        // URLs de las imágenes
+        logoUrl: 'https://i.imgur.com/9UPUKyW.png',  // Logo
+        imagenFondoHero: '${url}',  // ✅ TU IMAGEN AMARILLA
+        producto1: '',
+        producto2: ''
+    };`;
+            
+            document.getElementById('finalCode').textContent = code;
+            document.getElementById('generatedCode').style.display = 'block';
+            document.getElementById('generatedCode').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
+

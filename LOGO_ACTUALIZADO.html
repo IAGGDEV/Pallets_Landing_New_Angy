@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✅ Logo Actualizado - Pallets Premium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2C2C2C 100%);
+            color: white;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: #F5A623;
+            margin-bottom: 1rem;
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #E0E0E0;
+            margin-bottom: 3rem;
+        }
+        
+        .success-box {
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.2), rgba(76, 175, 80, 0.2));
+            border: 3px solid #28A745;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 2rem 0;
+            color: #4CAF50;
+            animation: pulse 2s infinite;
+        }
+        
+        .preview-section {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .preview-section h2 {
+            color: #F5A623;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .logo-preview-box {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2C2C2C 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(245, 166, 35, 0.3);
+        }
+        
+        .logo-preview-box img {
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+            filter: 
+                drop-shadow(0 8px 16px rgba(0,0,0,0.4))
+                drop-shadow(0 0 40px rgba(245, 166, 35, 0.3))
+                brightness(1.1)
+                contrast(1.05);
+            animation: fadeInScale 1s ease;
+        }
+        
+        .url-display {
+            background: #1a1a1a;
+            color: #4CAF50;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            word-break: break-all;
+            margin: 1.5rem 0;
+            border: 2px solid rgba(245, 166, 35, 0.3);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #F5A623;
+        }
+        
+        .info-card h3 {
+            color: #FFB84D;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .info-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #F5A623 0%, #FFB84D 100%);
+            color: #2C2C2C;
+            padding: 1.3rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.15rem;
+        }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(245, 166, 35, 0.5);
+        }
+        
+        .button-large {
+            font-size: 1.5rem;
+            padding: 1.5rem 3rem;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .checklist li {
+            padding: 1rem;
+            padding-left: 3.5rem;
+            margin-bottom: 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        .checklist li::before {
+            content: "✅";
+            position: absolute;
+            left: 1.2rem;
+            font-size: 1.5rem;
+        }
+        
+        .alert-info {
+            background: rgba(33, 150, 243, 0.15);
+            border-left: 5px solid #2196F3;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .alert-info h3 {
+            color: #64B5F6;
+            margin-bottom: 0.8rem;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .logo-preview-box img {
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✅ ¡Logo Actualizado desde Imgur!</h1>
+        <p class="subtitle">Tu logo ya está visible en la landing page</p>
+        
+        <div class="success-box">
+            🎉 Logo Configurado Exitosamente
+        </div>
+        
+        <!-- Vista previa del logo -->
+        <div class="preview-section">
+            <h2>👁️ Así se ve tu Logo</h2>
+            <div class="logo-preview-box">
+                <img src="https://i.imgur.com/9UPUKyW.png" alt="Pallets Premium Logo" onerror="this.parentElement.innerHTML='<div style=\'color: #FF5252; font-size: 1.2rem;\'>⚠️ Error al cargar el logo. <br><br>Por favor, verifica la URL en Imgur.</div>'">
+            </div>
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
+                Con efectos visuales aplicados: resplandor dorado, sombra y brillo optimizado
+            </p>
+        </div>
+        
+        <!-- URL configurada -->
+        <div class="preview-section">
+            <h2>🔗 URL Configurada</h2>
+            <div class="url-display">
+                https://i.imgur.com/9UPUKyW.png
+            </div>
+            <p style="color: rgba(255, 255, 255, 0.7); text-align: center;">
+                Esta URL está configurada en tu <strong>index.html</strong> (línea ~27)
+            </p>
+        </div>
+        
+        <!-- Información del logo -->
+        <div class="preview-section">
+            <h2>📊 Información del Logo</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📍 Ubicación</h3>
+                    <p>Parte superior de la landing page (Hero Section) y footer</p>
+                </div>
+                <div class="info-card">
+                    <h3>📏 Tamaños</h3>
+                    <p>Desktop: 450px | Tablet: 320px | Mobile: 260px</p>
+                </div>
+                <div class="info-card">
+                    <h3>✨ Efectos</h3>
+                    <p>Resplandor dorado, sombra, brillo, hover elevation</p>
+                </div>
+                <div class="info-card">
+                    <h3>🌐 Fuente</h3>
+                    <p>Imgur CDN (rápido y confiable)</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Verificación -->
+        <div class="preview-section">
+            <h2>✅ Verifica en tu Landing Page</h2>
+            <ul class="checklist">
+                <li>El logo debe aparecer en la parte superior (Hero Section)</li>
+                <li>Debe verse claro, nítido y profesional</li>
+                <li>El tamaño debe ser proporcional al diseño</li>
+                <li>Al pasar el mouse, el logo se eleva ligeramente</li>
+                <li>También aparece en el footer de la página</li>
+            </ul>
+        </div>
+        
+        <!-- Botones de acción -->
+        <div class="text-center" style="margin: 3rem 0;">
+            <button class="button button-large" onclick="window.open('index.html', '_blank')">
+                🚀 Ver Landing Page Completa
+            </button>
+            <br>
+            <button class="button" onclick="window.location.reload()">
+                🔄 Recargar Vista Previa
+            </button>
+            <button class="button" onclick="window.open('test-logo.html', '_blank')">
+                🎨 Probar Otros Estilos
+            </button>
+        </div>
+        
+        <!-- Siguiente paso -->
+        <div class="alert-info">
+            <h3>🚀 Próximo Paso: Configurar WhatsApp</h3>
+            <p style="margin-bottom: 1rem;">El logo ya está listo. Ahora configura tu número de WhatsApp para que los CTAs funcionen:</p>
+            <ol style="margin-left: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;">Abre <strong>index.html</strong></li>
+                <li style="margin-bottom: 0.5rem;">Busca la línea 18: <code style="background: rgba(0,0,0,0.4); padding: 0.3rem 0.6rem; border-radius: 4px;">whatsappPrimary: '5215512345678'</code></li>
+                <li style="margin-bottom: 0.5rem;">Reemplaza con tu número real (formato: código país + número sin espacios)</li>
+                <li>Guarda (Ctrl + S) y recarga el navegador</li>
+            </ol>
+        </div>
+        
+        <!-- Estado actual -->
+        <div class="preview-section">
+            <h2>📊 Estado Actual del Proyecto</h2>
+            <ul class="checklist">
+                <li>Landing page completa con 10 secciones ✅</li>
+                <li>Logo configurado y funcionando ✅</li>
+                <li>Sistema de URLs de imágenes activo ✅</li>
+                <li>Diseño responsive para todos los dispositivos ✅</li>
+                <li>7 botones de WhatsApp listos (pendiente: número real) ⏳</li>
+                <li>Listo para publicar (después de configurar WhatsApp) ⏳</li>
+            </ul>
+        </div>
+        
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(245, 166, 35, 0.3); color: rgba(255, 255, 255, 0.7);">
+            <p style="font-size: 1.2rem;"><strong>💛 ¡Tu Logo Está Listo!</strong></p>
+            <p style="margin-top: 1rem;">El logo se carga desde Imgur y se muestra en la parte superior de tu landing page</p>
+            <p style="margin-top: 0.5rem;">Si no lo ves, presiona <strong>F5</strong> para recargar la página</p>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✅ Imágenes de Productos Agregadas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2C2C2C 100%);
+            color: white;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #F5A623;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .success-banner {
+            background: linear-gradient(135deg, #28A745 0%, #4CAF50 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 2rem 0;
+            color: white;
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.4);
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .section h2 {
+            color: #F5A623;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .image-card {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid rgba(245, 166, 35, 0.3);
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .url-display {
+            background: #1a1a1a;
+            color: #4CAF50;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            word-break: break-all;
+            margin: 0.5rem 0;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #F5A623 0%, #FFB84D 100%);
+            color: #2C2C2C;
+            padding: 1.2rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(245, 166, 35, 0.5);
+        }
+        
+        .alert {
+            background: rgba(255, 152, 0, 0.15);
+            border-left: 5px solid #FF9800;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .alert h3 {
+            color: #FFB84D;
+            margin-bottom: 0.8rem;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .checklist li {
+            padding: 0.8rem;
+            padding-left: 3rem;
+            margin-bottom: 0.5rem;
+            background: rgba(40, 167, 69, 0.1);
+            border-radius: 8px;
+            position: relative;
+            border-left: 4px solid #28A745;
+        }
+        
+        .checklist li::before {
+            content: "✅";
+            position: absolute;
+            left: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖼️ Galería de Productos Agregada</h1>
+        
+        <div class="success-banner">
+            ✅ 2 Imágenes Agregadas Exitosamente
+        </div>
+        
+        <!-- Imágenes agregadas -->
+        <div class="section">
+            <h2>📸 Imágenes Configuradas</h2>
+            
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="https://i.imgur.com/WjYeJf3.jpg" alt="Producto 1" onerror="this.src=''; this.alt='Error al cargar'">
+                    <h3 style="color: #FFB84D; margin-bottom: 0.5rem;">Imagen 1</h3>
+                    <div class="url-display">https://i.imgur.com/WjYeJf3.jpg</div>
+                </div>
+                
+                <div class="image-card">
+                    <img src="https://i.imgur.com/wr5h3lm.jpg" alt="Producto 2" onerror="this.src=''; this.alt='Error al cargar'">
+                    <h3 style="color: #FFB84D; margin-bottom: 0.5rem;">Imagen 2</h3>
+                    <div class="url-display">https://i.imgur.com/wr5h3lm.jpg</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ubicación -->
+        <div class="section">
+            <h2>📍 Ubicación en la Landing Page</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 1rem; color: rgba(255,255,255,0.9);">
+                Las imágenes están en una <strong>nueva sección de galería</strong> que aparece:
+            </p>
+            <ul class="checklist">
+                <li>Justo después de la sección Hero (primera sección)</li>
+                <li>Antes de la sección Problema-Agitación-Solución</li>
+                <li>Con diseño responsive para todos los dispositivos</li>
+                <li>Efecto hover: las imágenes se elevan al pasar el mouse</li>
+            </ul>
+        </div>
+        
+        <!-- Álbum de Imgur -->
+        <div class="alert">
+            <h3>⚠️ Álbum de Imgur Pendiente</h3>
+            <p style="margin-bottom: 1rem; color: rgba(255,255,255,0.9);">
+                El primer link que me diste es un <strong>álbum</strong> de Imgur:
+            </p>
+            <div class="url-display" style="background: rgba(0,0,0,0.4); color: #FFB84D;">
+                https://imgur.com/a/A1L33hY
+            </div>
+            <p style="margin: 1rem 0; color: rgba(255,255,255,0.9);">
+                Para agregar las imágenes de este álbum, necesito que:
+            </p>
+            <ol style="margin-left: 1.5rem; color: rgba(255,255,255,0.8);">
+                <li style="margin-bottom: 0.5rem;">Abras el álbum en Imgur</li>
+                <li style="margin-bottom: 0.5rem;">Hagas clic en cada imagen individual</li>
+                <li style="margin-bottom: 0.5rem;">Copies la URL de cada imagen (ejemplo: <code style="background: rgba(0,0,0,0.4); padding: 0.2rem 0.5rem; border-radius: 3px;">https://imgur.com/XXXXX</code>)</li>
+                <li>Me las pases para agregarlas a la galería</li>
+            </ol>
+        </div>
+        
+        <!-- Cómo agregar más imágenes -->
+        <div class="section">
+            <h2>➕ Cómo Agregar Más Imágenes</h2>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">
+                <strong>Opción 1: Manualmente en el código</strong>
+            </p>
+            
+            <div style="background: rgba(0,0,0,0.4); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem;">
+                <p style="margin-bottom: 1rem;">Abre <code style="background: rgba(245,166,35,0.2); padding: 0.3rem 0.6rem; border-radius: 4px; color: #F5A623;">index.html</code> y busca la sección galería (línea ~95):</p>
+                <pre style="background: #1a1a1a; padding: 1rem; border-radius: 8px; color: #4CAF50; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.9rem;">&lt;div class="galeria-item animate-on-scroll"&gt;
+    &lt;img src="NUEVA_URL_AQUI" alt="Descripción"&gt;
+&lt;/div&gt;</pre>
+            </div>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">
+                <strong>Opción 2: Dime las URLs y yo las agrego</strong>
+            </p>
+            
+            <p style="color: rgba(255,255,255,0.8);">
+                Simplemente pégame las URLs de Imgur de las imágenes que quieras agregar y yo actualizo el código automáticamente.
+            </p>
+        </div>
+        
+        <!-- Características de la galería -->
+        <div class="section">
+            <h2>✨ Características de la Galería</h2>
+            <ul class="checklist">
+                <li>Diseño responsive (se adapta a móvil, tablet y desktop)</li>
+                <li>Grid automático que organiza las imágenes</li>
+                <li>Efecto hover con elevación y zoom suave</li>
+                <li>Carga lazy para mejor rendimiento</li>
+                <li>Sombras y bordes redondeados profesionales</li>
+            </ul>
+        </div>
+        
+        <!-- Botones -->
+        <div class="text-center" style="margin: 3rem 0;">
+            <button class="button" onclick="window.open('index.html', '_blank')" style="font-size: 1.3rem; padding: 1.3rem 3rem;">
+                👁️ Ver Landing Page con Galería
+            </button>
+            <br>
+            <button class="button" onclick="window.open('https://imgur.com/a/A1L33hY', '_blank')">
+                📂 Abrir Álbum de Imgur
+            </button>
+        </div>
+        
+        <!-- Siguiente paso -->
+        <div style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.2), rgba(100, 181, 246, 0.2)); padding: 2rem; border-radius: 15px; border: 2px solid #2196F3; margin: 3rem 0;">
+            <h3 style="color: #64B5F6; margin-bottom: 1rem; text-align: center; font-size: 1.6rem;">
+                📋 Próximos Pasos
+            </h3>
+            <ol style="margin-left: 2rem; font-size: 1.05rem; color: rgba(255,255,255,0.9);">
+                <li style="margin-bottom: 0.8rem;">
+                    <strong>Abre el álbum de Imgur</strong> y copia las URLs individuales de las imágenes
+                </li>
+                <li style="margin-bottom: 0.8rem;">
+                    <strong>Pégame las URLs</strong> para que las agregue a la galería
+                </li>
+                <li style="margin-bottom: 0.8rem;">
+                    <strong>Configura tu WhatsApp</strong> (línea 18 de index.html)
+                </li>
+                <li>
+                    <strong>¡Publica tu landing!</strong> Está casi lista
+                </li>
+            </ol>
+        </div>
+        
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(245, 166, 35, 0.3); color: rgba(255, 255, 255, 0.7);">
+            <p style="font-size: 1.2rem;"><strong>💛 Galería de Productos Activa</strong></p>
+            <p style="margin-top: 1rem;">Las 2 imágenes ya están visibles en tu landing page</p>
+            <p style="margin-top: 0.5rem;">Dime las URLs del álbum para agregar más imágenes</p>
+        </div>
+    </div>
+</body>
+</html>
+
