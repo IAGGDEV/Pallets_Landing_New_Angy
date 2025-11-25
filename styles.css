@@ -14,7 +14,7 @@
     --color-secondary: #2C2C2C; /* Negro del logo */
     --color-accent: #FFB84D;
     --color-bg: #FFFFFF;
-    --color-bg-light: #F8F9FA;
+    --color-bg-light: #FFFFFF; /* Fondos claros totalmente blancos */
     --color-text: #2C2C2C;
     --color-text-light: #666666;
     --color-success: #28A745;
