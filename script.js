@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const ctaOferta2 = document.getElementById('ctaOferta2');
         const ctaOferta3 = document.getElementById('ctaOferta3');
         const ctaOferta4 = document.getElementById('ctaOferta4');
+        const ctaOferta5 = document.getElementById('ctaOferta5');
         
         if (ctaOferta1) {
             const mensaje = encodeURIComponent('Hola! Quiero el paquete de 100 piezas caballero ($23,500)');
@@ -52,6 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
             ctaOferta4.href = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
             ctaOferta4.target = '_blank';
             ctaOferta4.rel = 'noopener noreferrer';
+        }
+
+        if (ctaOferta5) {
+            const mensaje = encodeURIComponent('Hola! Quiero el paquete de 50 piezas caballero ($14,500)');
+            ctaOferta5.href = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
+            ctaOferta5.target = '_blank';
+            ctaOferta5.rel = 'noopener noreferrer';
         }
         
         // CTA Cierre
