@@ -28,35 +28,35 @@ document.addEventListener('DOMContentLoaded', function() {
         const ctaOferta5 = document.getElementById('ctaOferta5');
         
         if (ctaOferta1) {
-            const mensaje = encodeURIComponent('Hola! Quiero el paquete de 100 piezas caballero ($23,500)');
+            const mensaje = encodeURIComponent('Hola Angy! Quiero el paquete de 100 piezas caballero ($23,500)');
             ctaOferta1.href = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
             ctaOferta1.target = '_blank';
             ctaOferta1.rel = 'noopener noreferrer';
         }
         
         if (ctaOferta2) {
-            const mensaje = encodeURIComponent('Hola! Quiero el paquete de 50 piezas dama ($10,000)');
+            const mensaje = encodeURIComponent('Hola Angy! Quiero el paquete de 50 piezas dama ($10,000)');
             ctaOferta2.href = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
             ctaOferta2.target = '_blank';
             ctaOferta2.rel = 'noopener noreferrer';
         }
         
         if (ctaOferta3) {
-            const mensaje = encodeURIComponent('Hola! Quiero el paquete de 100 piezas dama ($19,500) ⭐');
+            const mensaje = encodeURIComponent('Hola Angy! Quiero el paquete de 100 piezas dama ($19,500) ⭐');
             ctaOferta3.href = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
             ctaOferta3.target = '_blank';
             ctaOferta3.rel = 'noopener noreferrer';
         }
         
         if (ctaOferta4) {
-            const mensaje = encodeURIComponent('Hola! Quiero el paquete de 200 piezas dama ($36,000)');
+            const mensaje = encodeURIComponent('Hola Angy! Quiero el paquete de 200 piezas dama ($36,000)');
             ctaOferta4.href = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
             ctaOferta4.target = '_blank';
             ctaOferta4.rel = 'noopener noreferrer';
         }
 
         if (ctaOferta5) {
-            const mensaje = encodeURIComponent('Hola! Quiero el paquete de 50 piezas caballero ($14,500)');
+            const mensaje = encodeURIComponent('Hola Angy! Quiero el paquete de 50 piezas caballero ($14,500)');
             ctaOferta5.href = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
             ctaOferta5.target = '_blank';
             ctaOferta5.rel = 'noopener noreferrer';
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // CTA Cierre
         const ctaCierre = document.getElementById('ctaCierre');
         if (ctaCierre) {
-            const mensaje = encodeURIComponent(config.mensajeCierre || 'Hola! Quiero empezar a ganar con Pallets Premium');
+            const mensaje = encodeURIComponent(config.mensajeCierre || 'Hola Angy! Quiero empezar a ganar con Pallets Premium');
             ctaCierre.href = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
             ctaCierre.target = '_blank';
             ctaCierre.rel = 'noopener noreferrer';
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // CTA Floating
         const ctaFloating = document.getElementById('ctaFloating');
         if (ctaFloating) {
-            const mensaje = encodeURIComponent(config.mensajeHero || 'Hola! Quiero mi pallet hoy mismo');
+            const mensaje = encodeURIComponent(config.mensajeHero || 'Hola Angy! Quiero mi pallet hoy mismo');
             ctaFloating.href = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
             ctaFloating.target = '_blank';
             ctaFloating.rel = 'noopener noreferrer';
