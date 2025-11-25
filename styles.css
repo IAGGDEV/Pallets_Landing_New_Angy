@@ -212,11 +212,13 @@ body {
     padding: var(--spacing-md);
     background: transparent;
     border-radius: var(--radius-xl);
-    display: inline-block;
+    /* Nuevo: ocupar todo el ancho y alinear el logo a la izquierda */
+    display: flex;
+    justify-content: flex-start;
 }
 
 .logo {
-    max-width: 450px;
+    max-width: 220px; /* más pequeño para hero */
     width: 100%;
     height: auto;
     /* Mejor visibilidad sobre fondo amarillo */
@@ -519,14 +521,14 @@ body {
     
     .logo-container {
         padding: var(--spacing-sm);
+        justify-content: flex-start;
     }
     
     .logo {
-        max-width: 320px;
+        max-width: 180px;
         filter: 
             drop-shadow(0 6px 12px rgba(0,0,0,0.4))
-            drop-shadow(0 0 30px rgba(245, 166, 35, 0.3))
-            brightness(1.1);
+            contrast(1.1);
     }
     
     .hero-trust-indicators {
@@ -578,11 +580,10 @@ body {
     }
     
     .logo {
-        max-width: 260px;
+        max-width: 150px;
         filter: 
             drop-shadow(0 4px 8px rgba(0,0,0,0.4))
-            drop-shadow(0 0 20px rgba(245, 166, 35, 0.25))
-            brightness(1.12);
+            contrast(1.12);
     }
     
     .hero-tagline {
