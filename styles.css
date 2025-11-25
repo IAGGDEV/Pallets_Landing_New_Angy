@@ -81,82 +81,21 @@ body {
     padding: var(--spacing-xl) 0;
 }
 
-/* Imagen de fondo personalizable */
+/* Imagen de fondo personalizable del HERO
+   - Usa el archivo local hero-bg.jpg (recomendado)
+   - O bien será sobreescrita por window.CONFIG.imagenFondoHero si se define
+*/
 .hero-background-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('hero-bg.jpg'); /* CAMBIAR ESTA IMAGEN por la URL de tu imagen amarilla */
+    background-image: url('hero-bg.jpg'); /* Guarda aquí la imagen que me enviaste como hero-bg.jpg */
     background-size: cover;
-    background-position: center;
+    background-position: center right;
     background-repeat: no-repeat;
     z-index: 1;
-}
-
-/* OPCIÓN C: Fondo amarillo recreado con CSS (ACTIVO) */
-.hero-background-yellow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Degradado amarillo puro - igual a la imagen */
-    background: linear-gradient(180deg, #FFA500 0%, #FFB84D 40%, #FFD580 100%);
-    z-index: 1;
-}
-
-/* Elementos decorativos geométricos (desactivados para fondo limpio) */
-.hero-background-yellow::before {
-    display: none;
-}
-
-.hero-background-yellow::after {
-    display: none;
-}
-
-/* Formas geométricas decorativas */
-.hero-decorations {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.hero-decorations .line1 {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    width: 200px;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.2);
-    transform: rotate(45deg);
-}
-
-.hero-decorations .line2 {
-    position: absolute;
-    bottom: 30%;
-    right: 8%;
-    width: 150px;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.15);
-    transform: rotate(-30deg);
-}
-
-.hero-decorations .shape1 {
-    position: absolute;
-    top: 15%;
-    right: 15%;
-    width: 100px;
-    height: 100px;
-    border: 3px solid rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    transform: rotate(15deg);
 }
 
 /* Overlay para legibilidad del texto sobre imagen amarilla */
