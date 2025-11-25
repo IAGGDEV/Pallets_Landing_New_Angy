@@ -448,6 +448,16 @@ body {
     }
 }
 
+/* Pequeño “salto” suave para los iconos de beneficios */
+@keyframes beneficioBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px); /* ~ medio centímetro visual */
+    }
+}
+
 /* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
@@ -870,6 +880,9 @@ body {
 .beneficio-icon {
     font-size: 3.5rem;
     margin-bottom: var(--spacing-md);
+    /* Animación suave de salto continuo */
+    animation: beneficioBounce 2.2s ease-in-out infinite;
+    transform-origin: center bottom;
 }
 
 .beneficio-title {
