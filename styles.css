@@ -1201,9 +1201,27 @@ body {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 columnas visibles en desktop */
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 1280px) {
+    .pricing-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .pricing-card {

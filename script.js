@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (ctaOferta3) {
-            const mensaje = encodeURIComponent('Hola! Quiero el paquete de 100 piezas dama ($18,500) ⭐');
+            const mensaje = encodeURIComponent('Hola! Quiero el paquete de 100 piezas dama ($19,500) ⭐');
             ctaOferta3.href = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
             ctaOferta3.target = '_blank';
             ctaOferta3.rel = 'noopener noreferrer';
