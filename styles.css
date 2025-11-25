@@ -1177,9 +1177,12 @@ body {
 
 .caracteristica-brand {
     margin-top: var(--spacing-sm);
-    max-width: 80px;
+    max-width: 140px;  /* más grande y visible */
+    width: 100%;
     height: auto;
     opacity: 0.95;
+    align-self: center;  /* centrada bajo el texto */
+    display: block;
 }
 
 /* ==========================================
