@@ -858,6 +858,30 @@ body {
 }
 
 /* ==========================================
+   SECCIÓN CTA INTERMEDIA
+   ========================================== */
+.section-cta-mid {
+    padding: var(--spacing-xl) 0;
+    background: white;
+}
+
+.section-cta-mid-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-cta-mid-text {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.section-cta-mid .cta-button {
+    font-size: 1.1rem;
+}
+
+/* ==========================================
    SECCIÓN 3: BENEFICIOS
    ========================================== */
 .section-beneficios {
