@@ -1148,6 +1148,7 @@ body {
 
 .caracteristica-item {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-sm);
     background: white;
@@ -1158,6 +1159,12 @@ body {
     transition: all var(--transition-base);
 }
 
+.caracteristica-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
 .caracteristica-item:hover {
     transform: translateX(5px);
     box-shadow: var(--shadow-md);
@@ -1166,6 +1173,13 @@ body {
 .check-icon {
     font-size: 1.5rem;
     flex-shrink: 0;
+}
+
+.caracteristica-brand {
+    margin-top: var(--spacing-sm);
+    max-width: 80px;
+    height: auto;
+    opacity: 0.95;
 }
 
 /* ==========================================
