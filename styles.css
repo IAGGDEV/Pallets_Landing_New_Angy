@@ -1195,26 +1195,21 @@ body {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 columnas visibles en desktop */
+    grid-template-columns: repeat(3, minmax(260px, 1fr)); /* 3 arriba, 2 abajo (5 tarjetas) */
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
+    justify-content: center; /* centrar filas cuando falten columnas */
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
     .pricing-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(260px, 1fr)); /* 2 x fila en pantallas medianas */
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 720px) {
     .pricing-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 600px) {
-    .pricing-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(260px, 1fr); /* 1 por fila en mobile */
     }
 }
 
